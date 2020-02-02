@@ -6,8 +6,9 @@ Un nain ne peut travailler que dans une seule mine, une mine peut avoir plusieur
 Objectif :
 Nous souhaiterions réaliser un client web permettant de lister les informations sur les nains et la mine dans laquelle ils travaillent.
 
-	1) Créer la base de données MySQL en utilisant le dump fourni pour ce projet et récupérer les données sous forme d’objets dans votre serveur PHP
-	2) Afficher ces données dans un client web en utilisant la techno de votre choix
+	 Créer la base de données MySQL en utilisant le dump fourni pour ce projet et récupérer les données sous forme d’objets dans votre serveur PHP
+	 Afficher ces données dans un client web en utilisant la techno de votre choix
+
 
 Bonus : 
 Utilisation du framework Symfony
@@ -19,17 +20,19 @@ Votre projet devra être hébergé dans un repo git que vous nous transmettrez, 
 
 
 
+
+```
 CREATE TABLE `Nain` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `taille` float NOT NULL,
   `mine_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+```
 --
 -- Contenu de la table `nain`
 --
-
+```
 INSERT INTO `Nain` (`id`, `nom`, `taille`, `mine_id`) VALUES
 (0, 'Posteur', 125, 4),
 (1, 'Therin', 125, 0),
@@ -59,14 +62,15 @@ CREATE TABLE `Mine` (
   `nom` varchar(255) NOT NULL,
   `profondeur` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+```
 --
 -- Contenu de la table `tunnel`
 --
-
+```
 INSERT INTO `Mine` (`id`, `nom`, `profondeur`) VALUES
 (0, 'Moria', 45.3),
 (1, 'Astirit',  345),
 (2, 'Able', 453),
 (3, 'Imum', 576),
 (4, 'Gnon', 454);
+```
